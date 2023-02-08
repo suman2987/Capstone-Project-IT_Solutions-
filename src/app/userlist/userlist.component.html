@@ -1,0 +1,57 @@
+
+<h2>User List</h2>
+
+<table class="table table-striped">
+<thead>
+<tr>
+ <th>ID</th>
+ <th>UserName</th>
+ <th>Email Id</th>
+</tr>
+</thead>
+<tbody>
+<tr *ngFor="let u of user">
+    <td>{{u.id}}</td>
+    <td>{{u.username}}</td>
+    <td>{{u.emailId}}</td>
+<td>
+  <button (click)="updateUser(u.id)" class="btn btn-info">Update</button>
+  <button (click)="deleteUser(u.id)" class="btn btn-danger" style="margin-left: 10px;">Delete</button>
+</td>
+
+</tr>
+
+
+</tbody>
+</table>
+&nbsp;&nbsp;<button class="btn btn-success" [routerLink]="'/adminpage'">Back</button>
+<!-- <table>
+ <thead>
+   <tr>
+    <td>Id</td>
+    <td>UserName</td>
+    <td>EmailId</td>
+   </tr>
+
+
+
+ </thead>
+<tbody>
+     <tr *ngFor="let u of user">
+        <td>{{u.id}}</td>
+        <td>{{u.username}}</td>
+        <td>{{u.emailId}}</td>
+        
+
+     </tr>
+</tbody>
+
+
+
+
+</table> -->
+<footer class="footer">
+    <div class="container"></div>
+    <span>Al Rights reserved @EcMaaTech</span>
+
+</footer>

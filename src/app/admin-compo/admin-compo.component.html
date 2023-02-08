@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+        <h2>Admin Login Form</h2>
+        <form #loginForm="ngForm" (ngSubmit)="loginAdmin()">
+          {{loginForm.form.valid}}
+          <small class="text-danger">{{msg}}</small>
+          <div class="form-group">
+            <label for="username">Username:</label>
+            <input type="text" class="form-control"  placeholder="Enter username" name="email" [(ngModel)]="admin.username" required  #username="ngModel"
+            [class.is-invalid]="username.invalid && username.touched"
+            ><small class="text-danger" [class.d-none]="username.valid || username.untouched">Email is required field</small>
+            <!-- <div *ngIf="email.errors && (email.invalid && email.touched)">
+            <small class="text-danger" *ngIf="email.errors.required">Email is required field</small></div> -->
+            <!-- <small class="text-danger" *ngIf="email.errors.pattern">Enter the valid emailId</small></div> -->
+          </div>
+          <div class="form-group">
+            <label for="pwd">Password:</label>
+            <input type="password" class="form-control"  placeholder="Enter password" name="password" [(ngModel)]="admin.password" required #password="ngModel"
+            [class.is-invalid]="password.invalid && password.touched">
+            <small class="text-danger" [class.d-none]="password.valid || password.untouched">Password is required field</small>
+          </div>
+          <div class="checkbox">
+            <label><input type="checkbox" name="remember"> Remember me</label>
+          </div>
+          <button [disabled]="loginForm.form.invalid" type="submit" class="btn btn-info">Login</button>
+        </form>
+           <button class="float-right btn btn-info" (click)="goToHomepage()">Back</button>
+      </div>
+      
+</body>
+</html>

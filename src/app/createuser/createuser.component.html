@@ -1,0 +1,39 @@
+
+<div class="col-md-6 offset-md-3">
+<h3>Add User</h3>
+<form (ngSubmit)="onSubmit()">
+ <div class="form-group">
+   <label>Id</label>
+    <input type="number" class="form-control" id="id" [(ngModel)]="user.id" name="id">
+
+ </div>
+ <div class="form-group">
+    <label>UserName</label>
+     <input type="text" class="form-control" id="username" [(ngModel)]="user.username" name="username">
+ 
+  </div>
+
+  <div class="form-group">
+    <label>Email Id</label>
+     <input type="text" class="form-control" id="emailId" [(ngModel)]="user.emailId" name="emailId">
+ 
+  </div>
+  <div class="form-group">
+   <label>Password</label>
+    <input type="text" class="form-control" id="password" [(ngModel)]="user.password" name="password">
+
+ </div>
+  <button class="btn btn-success" type="submit">Submit</button>
+  <button class="btn btn-info float-right" [routerLink]="'/adminpage'">Back</button>
+
+
+</form>
+</div>
+
+
+
+<footer class="footer">
+    <div class="container"></div>
+    <span>Al Rights reserved @EcMaaTech</span>
+
+</footer>

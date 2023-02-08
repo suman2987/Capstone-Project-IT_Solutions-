@@ -1,0 +1,43 @@
+
+
+
+<h2>Service List</h2>
+
+<table class="table table-striped">
+<thead>
+<tr>
+ <th>ID</th>
+ <th>ServiceName</th>
+ 
+</tr>
+</thead>
+<tbody>
+<tr *ngFor="let s of itservice">
+    <td>{{s.id}}</td>
+    <td>{{s.serviceName}}</td>
+
+
+
+   
+
+
+</tr>
+
+
+</tbody>
+</table>    
+
+<button class="btn btn-info" [routerLink]="'/login'">Back</button>
+
+
+
+
+
+
+
+
+<footer class="footer">
+    <div class="container"></div>
+    <span>Al Rights reserved @EcMaaTech</span>
+
+</footer>
